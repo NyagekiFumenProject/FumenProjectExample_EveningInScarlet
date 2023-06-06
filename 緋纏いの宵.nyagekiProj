@@ -1,30 +1,30 @@
 {
   "Version": "0.5.2",
   "Id": "0099bbb6-0583-427e-abd0-e4191d14248e",
-  "AudioFilePath": "Freezer,\u5983\u82FA - \u7DCB\u7E8F\u3044\u306E\u5BB5(feat.\u5983\u82FA).mp3",
+  "AudioFilePath": "bgm.wav",
   "AudioDuration": {
     "Ticks": 1289142857
   },
   "EditorSetting": {
-    "JudgeLineOffsetY": 75,
-    "DisableXGridMagneticDock": false,
-    "ForceMagneticDock": true,
-    "ForceTapHoldMagneticDockToLane": false,
-    "JudgeLineAlignBeat": false,
     "DisableTGridMagneticDock": false,
+    "ForceXGridMagneticDock": false,
+    "DisableXGridMagneticDock": false,
+    "ForceTapHoldMagneticDockToLane": false,
+    "ForceMagneticDock": false,
+    "JudgeLineAlignBeat": false,
     "XGridUnitSpace": 4,
     "TGridUnitLength": 240,
-    "BeatSplit": 4,
-    "XGridDisplayMaxUnit": 64,
-    "ForceXGridMagneticDock": false,
-    "VerticalDisplayScale": 0.75,
-    "MouseWheelLength": 50,
+    "BeatSplit": 1,
+    "XGridDisplayMaxUnit": 24,
+    "JudgeLineOffsetY": 50,
+    "VerticalDisplayScale": 1,
     "DisplayTimeFormat": 0,
+    "MouseWheelLength": 50,
     "IsNotifying": true
   },
   "FumenFilePath": "fumen.ogkr",
   "RememberLastDisplayTime": {
-    "Ticks": 1043294117
+    "Ticks": 514544117
   },
   "StoreBulletPalleteEditorDatas": {
     "A0": {
