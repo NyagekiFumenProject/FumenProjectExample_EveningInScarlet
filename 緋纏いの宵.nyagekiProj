@@ -1,0 +1,46 @@
+{
+  "Version": "0.5.2",
+  "Id": "0099bbb6-0583-427e-abd0-e4191d14248e",
+  "AudioFilePath": "Freezer,\u5983\u82FA - \u7DCB\u7E8F\u3044\u306E\u5BB5(feat.\u5983\u82FA).mp3",
+  "AudioDuration": {
+    "Ticks": 1289142857
+  },
+  "EditorSetting": {
+    "JudgeLineOffsetY": 75,
+    "DisableXGridMagneticDock": false,
+    "ForceMagneticDock": true,
+    "ForceTapHoldMagneticDockToLane": false,
+    "JudgeLineAlignBeat": false,
+    "DisableTGridMagneticDock": false,
+    "XGridUnitSpace": 4,
+    "TGridUnitLength": 240,
+    "BeatSplit": 4,
+    "XGridDisplayMaxUnit": 64,
+    "ForceXGridMagneticDock": false,
+    "VerticalDisplayScale": 0.75,
+    "MouseWheelLength": 50,
+    "DisplayTimeFormat": 0,
+    "IsNotifying": true
+  },
+  "FumenFilePath": "fumen.ogkr",
+  "RememberLastDisplayTime": {
+    "Ticks": 1043294117
+  },
+  "StoreBulletPalleteEditorDatas": {
+    "A0": {
+      "Name": "\u8282\u62CD\u5360\u4F4D",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    }
+  },
+  "IsNotifying": true
+}

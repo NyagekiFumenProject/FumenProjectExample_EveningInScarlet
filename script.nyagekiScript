@@ -1,0 +1,14 @@
+using Caliburn.Micro;
+using OngekiFumenEditor.Modules.FumenVisualEditor.Kernel;
+using OngekiFumenEditor.Utils;
+using OngekiFumenEditorPlugins.EditorScriptExecutor.Scripts;
+using System;
+
+
+//获取编辑器目标对象
+var targetEditor = ScriptArgs.TargetEditor;
+if (targetEditor is not null)
+    return;
+
+var fumen = targetEditor.Fumen;
+
