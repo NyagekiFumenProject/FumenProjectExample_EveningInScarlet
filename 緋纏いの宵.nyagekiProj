@@ -6,25 +6,25 @@
     "Ticks": 1289142857
   },
   "EditorSetting": {
-    "JudgeLineOffsetY": 75,
-    "DisableXGridMagneticDock": false,
-    "ForceMagneticDock": true,
-    "ForceTapHoldMagneticDockToLane": false,
-    "JudgeLineAlignBeat": false,
     "DisableTGridMagneticDock": false,
+    "ForceXGridMagneticDock": false,
+    "DisableXGridMagneticDock": false,
+    "ForceTapHoldMagneticDockToLane": false,
+    "ForceMagneticDock": true,
+    "JudgeLineAlignBeat": false,
     "XGridUnitSpace": 4,
     "TGridUnitLength": 240,
-    "BeatSplit": 8,
+    "BeatSplit": 4,
     "XGridDisplayMaxUnit": 64,
-    "ForceXGridMagneticDock": false,
+    "JudgeLineOffsetY": 75,
     "VerticalDisplayScale": 0.75,
-    "MouseWheelLength": 50,
     "DisplayTimeFormat": 0,
+    "MouseWheelLength": 50,
     "IsNotifying": true
   },
   "FumenFilePath": "fumen.ogkr",
   "RememberLastDisplayTime": {
-    "Ticks": 895816176
+    "Ticks": 705036764
   },
   "StoreBulletPalleteEditorDatas": {
     "A0": {
