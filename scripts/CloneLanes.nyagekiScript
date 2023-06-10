@@ -1,18 +1,12 @@
-//学习本脚本语言: C# : https://dotnet.microsoft.com/en-us/learn/csharp
-//学习本脚本格式: C# Script : https://docs.microsoft.com/en-us/archive/msdn-magazine/2016/january/essential-net-csharp-scripting
-
-// 如何使用? 编写脚本代码 -> 编译脚本 -> 钦定目标编辑器 -> 执行脚本！
 using OngekiFumenEditor.Base;
 using OngekiFumenEditor.Base.OngekiObjects;
 using System.Linq;
 using OngekiFumenEditorPlugins.EditorScriptExecutor.Scripts;
-using OngekiFumenEditor.Base.OngekiObjects.Lane.Base;
 using OngekiFumenEditor.Base.OngekiObjects.Lane;
 using OngekiFumenEditor.Base.OngekiObjects.Wall;
 using OngekiFumenEditor.Base.OngekiObjects.ConnectableObject;
 using OngekiFumenEditor.Base.EditorObjects.LaneCurve;
 using OngekiFumenEditor.Utils;
-using Microsoft.CodeAnalysis.Differencing;
 using OngekiFumenEditor.Modules.FumenVisualEditor.Base;
 
 var sourceLaneGroupId = 150;
