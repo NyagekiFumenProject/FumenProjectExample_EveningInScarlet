@@ -1,0 +1,77 @@
+//学习本脚本语言: C# : https://dotnet.microsoft.com/en-us/learn/csharp
+//学习本脚本格式: C# Script : https://docs.microsoft.com/en-us/archive/msdn-magazine/2016/january/essential-net-csharp-scripting
+
+// 如何使用? 编写脚本代码 -> 编译脚本 -> 钦定目标编辑器 -> 执行脚本！
+
+using OngekiFumenEditor.Base;
+using OngekiFumenEditor.Base.Collections;
+using OngekiFumenEditor.Base.OngekiObjects;
+using OngekiFumenEditor.Modules.FumenVisualEditor.Base;
+using OngekiFumenEditor.Utils;
+using OngekiFumenEditorPlugins.EditorScriptExecutor.Scripts;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+
+//获取编辑器目标对象
+var targetEditor = ScriptArgs.TargetEditor;
+if (targetEditor?.Fumen is not OngekiFumen fumen)
+    return;
+
+var bplList = fumen.BulletPalleteList;
+
+var useds = fumen.Bullets
+    .AsEnumerable<IBulletPalleteReferencable>()
+    .Concat(fumen.Bells)
+    .Select(x => x.ReferenceBulletPallete)
+    .FilterNull()
+    .Distinct()
+    .ToHashSet();
+
+var unuseds = bplList.Except(useds).ToArray();
+/*
+foreach (var unused in unuseds)
+    Log.LogDebug($"Remove unused bpl object:{unused}");
+*/
+var backupStrIds = new Dictionary<BulletPallete,string>;
+
+void CleanUnused()
+{
+    targetEditor.UndoRedoManager.ExecuteAction(LambdaUndoAction.Create("[脚本]清除未使用的BPL物件", () => 
+    {
+        foreach (var unused in unuseds)
+            bplList.RemovePallete(unused);
+    }, () =>
+    {
+        foreach (var unused in unuseds)
+            bplList.AddPallete(unused);
+    }));
+}
+
+var field = bplList.GetType().GetField("cacheCurrentMaxId", BindingFlags.Instance | BindingFlags.NonPublic);
+
+void TidyUp()
+{
+    targetEditor.UndoRedoManager.ExecuteAction(LambdaUndoAction.Create("[脚本]整理并重命名BPL名称", () =>
+    {
+        var idx = 0;
+        backupStrIds.Clear();
+
+        foreach (var bpl in bplList)
+        {
+            var newId = BulletPalleteList.ConvertIntToId(idx++);
+            backupStrIds[bpl] = bpl.StrID;
+            bpl.StrID = newId;
+        }
+        if (field is not null)
+            field.SetValue(bplList, null);
+    }, () =>
+    {
+        foreach (var bpl in bplList)
+            if (backupStrIds.TryGetValue(bpl,out var beforeStrID))
+                bpl.StrID = beforeStrID;
+        backupStrIds.Clear();
+        if (field is not null)
+            field.SetValue(bplList, null);
+    }));
+}

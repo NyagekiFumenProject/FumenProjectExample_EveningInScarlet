@@ -1,0 +1,44 @@
+using OngekiFumenEditor.Base.OngekiObjects;
+using OngekiFumenEditor.Modules.FumenVisualEditor.Base;
+using OngekiFumenEditor.Utils;
+using OngekiFumenEditorPlugins.EditorScriptExecutor.Scripts;
+using System.Collections.Generic;
+using System.Linq;
+
+//获取编辑器目标对象
+var targetEditor = ScriptArgs.TargetEditor;
+if (targetEditor is null)
+    return;
+
+var targetBullet = targetEditor.Fumen.Bullets.BinaryFindRange(new(41, 0), new(41, 0))
+    .Where(x => x.ReferenceBulletPallete?.StrID == "A0").FirstOrDefault();
+
+var genList = new List<Bullet>();
+
+var genBPLs = Enumerable.Range(0, 6)
+    .Select(x => $"C-L-{x}")
+    .Select(y => targetEditor.Fumen.BulletPalleteList.FirstOrDefault(x => x.EditorName == y))
+    .FilterNull()
+    .ToArray();
+
+targetEditor.UndoRedoManager.ExecuteAction(LambdaUndoAction.Create("[脚本]生成横截式子弹(C-x)",
+    () =>
+    {
+        for (int i = 0; i < genBPLs.Length; i++)
+        {
+            var bpl = genBPLs[i];
+            var blt = targetBullet.CopyNew(targetEditor.Fumen) as Bullet;
+            blt.ReferenceBulletPallete = bpl;
+
+            targetEditor.Fumen.AddObject(blt);
+            genList.Add(blt);
+        }
+
+        targetEditor.Fumen.RemoveObject(targetBullet);
+    },
+    () =>
+    {
+        targetEditor.Fumen.RemoveObjects(genList);
+        genList.Clear();
+        targetEditor.Fumen.AddObject(targetBullet);
+    }));

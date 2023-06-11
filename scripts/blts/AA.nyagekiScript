@@ -1,0 +1,48 @@
+//学习本脚本语言: C# : https://dotnet.microsoft.com/en-us/learn/csharp
+//学习本脚本格式: C# Script : https://docs.microsoft.com/en-us/archive/msdn-magazine/2016/january/essential-net-csharp-scripting
+
+// 如何使用? 编写脚本代码 -> 编译脚本 -> 钦定目标编辑器 -> 执行脚本！
+
+using OngekiFumenEditor.Base.OngekiObjects;
+using OngekiFumenEditor.Modules.FumenVisualEditor.Base;
+using OngekiFumenEditorPlugins.EditorScriptExecutor.Scripts;
+using System.Collections.Generic;
+using System.Linq;
+
+//获取编辑器目标对象
+var targetEditor = ScriptArgs.TargetEditor;
+if (targetEditor is null)
+    return;
+
+var targetBullets = targetEditor.Fumen.Bullets.BinaryFindRange(new (33,1440),new(34,0))
+    .Where(x => x.ReferenceBulletPallete?.StrID == "A0").ToArray();
+
+var genList = new List<Bullet>();
+
+var b0BPL = targetEditor.Fumen.BulletPalleteList.FirstOrDefault(x => x.EditorName == "B-0");
+var b1BPL = targetEditor.Fumen.BulletPalleteList.FirstOrDefault(x => x.EditorName == "B-1");
+
+var genBPLs = new[] { b0BPL, b1BPL };
+
+targetEditor.UndoRedoManager.ExecuteAction(LambdaUndoAction.Create("[脚本]生成子弹(B-x)",
+    () =>
+    {
+        foreach (var bullet in targetBullets)
+        {
+            foreach (var bpl in genBPLs)
+            {
+                var blt = bullet.CopyNew(targetEditor.Fumen) as Bullet;
+                blt.ReferenceBulletPallete = bpl;
+
+                targetEditor.Fumen.AddObject(blt);
+                genList.Add(blt);
+            }
+        }
+        targetEditor.Fumen.RemoveObjects(targetBullets);
+    },
+    () =>
+    {
+        targetEditor.Fumen.RemoveObjects(genList);
+        genList.Clear();
+        targetEditor.Fumen.AddObjects(targetBullets);
+    }));
