@@ -1,0 +1,39 @@
+using Caliburn.Micro;
+using OngekiFumenEditor.Base;
+using OngekiFumenEditor.Base.OngekiObjects;
+using OngekiFumenEditor.Modules.FumenVisualEditor.Base;
+using OngekiFumenEditor.Modules.FumenVisualEditor.Kernel;
+using OngekiFumenEditor.Utils;
+using OngekiFumenEditorPlugins.EditorScriptExecutor.Scripts;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.WebSockets;
+
+//获取编辑器目标对象
+var targetEditor = ScriptArgs.TargetEditor;
+if (targetEditor is null)
+    return;
+
+var genList = new List<OngekiObjectBase>();
+
+foreach (var bpl in targetEditor.Fumen.BulletPalleteList.Where(x=>x.EditorName == "D-L"))
+{
+    var cp = new BulletPallete();
+    cp.Copy(bpl, targetEditor.Fumen);
+
+    cp.EditorName = "D-R";
+    cp.PlaceOffset = -cp.PlaceOffset;
+
+    genList.Add(cp);
+}
+
+targetEditor.UndoRedoManager.ExecuteAction(LambdaUndoAction.Create("[脚本]批量复制bpl",
+    () =>
+    {
+        targetEditor.Fumen.AddObjects(genList);
+    },
+    () =>
+    {
+        targetEditor.Fumen.RemoveObjects(genList);
+    }));

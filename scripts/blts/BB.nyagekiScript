@@ -1,3 +1,4 @@
+using OngekiFumenEditor.Base;
 using OngekiFumenEditor.Base.OngekiObjects;
 using OngekiFumenEditor.Modules.FumenVisualEditor.Base;
 using OngekiFumenEditor.Utils;
@@ -10,13 +11,16 @@ var targetEditor = ScriptArgs.TargetEditor;
 if (targetEditor is null)
     return;
 
-var targetBullet = targetEditor.Fumen.Bullets.BinaryFindRange(new(41, 0), new(41, 0))
+var targetBullet = targetEditor.Fumen.Bullets.BinaryFindRange(new(41, 960), new(41, 960))
     .Where(x => x.ReferenceBulletPallete?.StrID == "A0").FirstOrDefault();
 
 var genList = new List<Bullet>();
 
+var isLeft = false;
+var xOffset = new GridOffset(4,0);
+
 var genBPLs = Enumerable.Range(0, 6)
-    .Select(x => $"C-L-{x}")
+    .Select(x => $"C-{(isLeft?"L":"R")}-{x}")
     .Select(y => targetEditor.Fumen.BulletPalleteList.FirstOrDefault(x => x.EditorName == y))
     .FilterNull()
     .ToArray();
@@ -29,6 +33,10 @@ targetEditor.UndoRedoManager.ExecuteAction(LambdaUndoAction.Create("[脚本]生�
             var bpl = genBPLs[i];
             var blt = targetBullet.CopyNew(targetEditor.Fumen) as Bullet;
             blt.ReferenceBulletPallete = bpl;
+
+            var offset = new GridOffset(0, xOffset.TotalGrid(blt.XGrid.GridRadix) * i* (isLeft?-1:1));
+            var newXGrid = blt.XGrid + offset;
+            blt.XGrid = newXGrid;
 
             targetEditor.Fumen.AddObject(blt);
             genList.Add(blt);
