@@ -17,12 +17,13 @@ if (targetEditor is null)
 
 var genList = new List<OngekiObjectBase>();
 
-foreach (var bpl in targetEditor.Fumen.BulletPalleteList.Where(x=>x.EditorName == "D-L"))
+foreach (var bpl in targetEditor.Fumen.BulletPalleteList.Where(x=>x.EditorName == "G-L"))
 {
     var cp = new BulletPallete();
     cp.Copy(bpl, targetEditor.Fumen);
 
-    cp.EditorName = "D-R";
+    cp.StrID = null;
+    cp.EditorName = "G-R";
     cp.PlaceOffset = -cp.PlaceOffset;
 
     genList.Add(cp);

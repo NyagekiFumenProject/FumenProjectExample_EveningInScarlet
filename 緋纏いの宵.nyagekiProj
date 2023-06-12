@@ -7,7 +7,7 @@
   },
   "EditorSetting": {
     "DisableTGridMagneticDock": false,
-    "ForceXGridMagneticDock": false,
+    "ForceXGridMagneticDock": true,
     "DisableXGridMagneticDock": false,
     "ForceTapHoldMagneticDockToLane": false,
     "ForceMagneticDock": true,
@@ -16,7 +16,7 @@
     "TGridUnitLength": 240,
     "BeatSplit": 4,
     "XGridDisplayMaxUnit": 64,
-    "JudgeLineOffsetY": 50,
+    "JudgeLineOffsetY": 75,
     "VerticalDisplayScale": 0.75,
     "DisplayTimeFormat": 0,
     "MouseWheelLength": 50,
@@ -24,7 +24,7 @@
   },
   "FumenFilePath": "fumen.ogkr",
   "RememberLastDisplayTime": {
-    "Ticks": 995154411
+    "Ticks": 208205882
   },
   "StoreBulletPalleteEditorDatas": {
     "A0": {
@@ -407,6 +407,454 @@
     },
     "AX": {
       "Name": "D-R",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "AY": {
+      "Name": "D-L",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "AZ": {
+      "Name": "D-L",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "B0": {
+      "Name": "D-L",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "B1": {
+      "Name": "D-L",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "B2": {
+      "Name": "D-L",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "B3": {
+      "Name": "D-L",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "B4": {
+      "Name": "D-L",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "B5": {
+      "Name": "D-L",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "B6": {
+      "Name": "D-L",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "B7": {
+      "Name": "E-0",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "B9": {
+      "Name": "E-1",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BB": {
+      "Name": "E-2",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BC": {
+      "Name": "F-0",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BE": {
+      "Name": "F-1",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BF": {
+      "Name": "F-2",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BG": {
+      "Name": "F-3",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BH": {
+      "Name": "F-4",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BI": {
+      "Name": "F-5",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BJ": {
+      "Name": "F-6",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BK": {
+      "Name": "G-L",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BL": {
+      "Name": "G-L",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BM": {
+      "Name": "G-L",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BN": {
+      "Name": "G-L",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BO": {
+      "Name": "G-R",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BP": {
+      "Name": "G-R",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BQ": {
+      "Name": "G-R",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BR": {
+      "Name": "G-R",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BS": {
+      "Name": "H-0",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BT": {
+      "Name": "H-1",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BU": {
+      "Name": "H-2",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BV": {
+      "Name": "H-3",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BW": {
+      "Name": "H-4",
       "AuxiliaryLineColor": {
         "ColorContext": null,
         "A": 255,
