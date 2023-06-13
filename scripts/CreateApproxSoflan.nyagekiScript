@@ -1,0 +1,60 @@
+using Caliburn.Micro;
+using OngekiFumenEditor.Base;
+using OngekiFumenEditor.Base.OngekiObjects;
+using OngekiFumenEditor.Modules.FumenVisualEditor.Base;
+using OngekiFumenEditor.Modules.FumenVisualEditor.Kernel;
+using OngekiFumenEditor.Utils;
+using OngekiFumenEditorPlugins.EditorScriptExecutor.Scripts;
+using System.Linq;
+using System.Collections.Generic;
+
+//获取编辑器目标对象
+var targetEditor = ScriptArgs.TargetEditor;
+if (targetEditor is null)
+    return;
+
+//------
+var beginTGrid = new TGrid(0, 0);
+var beginSpeed = 1f;
+
+var endTGrid = new TGrid(10, 0);
+var endSpeed = 0.75f;
+
+var easing = EasingTypes.InCubic;
+var sampleCount = 10;
+//------
+
+var beginTotalUnit = beginTGrid.TotalUnit;
+var endTotalUnit = endTGrid.TotalUnit;
+
+var duration = (endTotalUnit - beginTotalUnit) / sampleCount;
+
+var genList = new List<Soflan>();
+
+for (int i = 0; i < sampleCount; i++)
+{
+    var fromTotalUnit = beginTotalUnit + duration * i;
+    var toTotalUnit = fromTotalUnit + duration;
+
+    var spd = beginSpeed + Interpolation.ApplyEasing(easing, 0, 1, i * 1.0f / sampleCount) * (endSpeed - beginSpeed);
+
+    var soflan = new Soflan()
+    {
+        TGrid = new TGrid((float)fromTotalUnit, 0),
+        Speed = (float)spd,
+    };
+
+    soflan.EndTGrid = new TGrid((float)toTotalUnit, 0);
+    soflan.TGrid.NormalizeSelf();
+    soflan.EndTGrid.NormalizeSelf();
+}
+
+targetEditor.UndoRedoManager.ExecuteAction(LambdaUndoAction.Create("[脚本]插值生成变速",
+    () =>
+    {
+        targetEditor.Fumen.AddObjects(genList);
+    },
+    () =>
+    {
+        targetEditor.Fumen.RemoveObjects(genList);
+    }));

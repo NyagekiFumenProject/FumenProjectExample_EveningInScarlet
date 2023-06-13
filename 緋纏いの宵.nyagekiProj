@@ -7,7 +7,7 @@
   },
   "EditorSetting": {
     "DisableTGridMagneticDock": false,
-    "ForceXGridMagneticDock": true,
+    "ForceXGridMagneticDock": false,
     "DisableXGridMagneticDock": false,
     "ForceTapHoldMagneticDockToLane": false,
     "ForceMagneticDock": true,
@@ -15,16 +15,16 @@
     "XGridUnitSpace": 4,
     "TGridUnitLength": 240,
     "BeatSplit": 4,
-    "XGridDisplayMaxUnit": 64,
+    "XGridDisplayMaxUnit": 48,
     "JudgeLineOffsetY": 75,
     "VerticalDisplayScale": 0.75,
-    "DisplayTimeFormat": 0,
+    "DisplayTimeFormat": 1,
     "MouseWheelLength": 50,
     "IsNotifying": true
   },
   "FumenFilePath": "fumen.ogkr",
   "RememberLastDisplayTime": {
-    "Ticks": 208205882
+    "Ticks": 1278022058
   },
   "StoreBulletPalleteEditorDatas": {
     "A0": {
@@ -855,6 +855,118 @@
     },
     "BW": {
       "Name": "H-4",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BX": {
+      "Name": "I-L-0",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BY": {
+      "Name": "I-L-1",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "BZ": {
+      "Name": "I-L-2",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "C0": {
+      "Name": "I-L-3",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "C1": {
+      "Name": "I-R-0",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "C2": {
+      "Name": "I-R-1",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "C3": {
+      "Name": "I-R-2",
+      "AuxiliaryLineColor": {
+        "ColorContext": null,
+        "A": 255,
+        "R": 189,
+        "G": 183,
+        "B": 107,
+        "ScA": 1,
+        "ScR": 0.50888133,
+        "ScG": 0.4735315,
+        "ScB": 0.14702727
+      }
+    },
+    "C4": {
+      "Name": "I-R-3",
       "AuxiliaryLineColor": {
         "ColorContext": null,
         "A": 255,
