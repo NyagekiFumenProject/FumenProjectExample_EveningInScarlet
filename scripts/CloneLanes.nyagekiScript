@@ -9,9 +9,9 @@ using OngekiFumenEditor.Base.EditorObjects.LaneCurve;
 using OngekiFumenEditor.Utils;
 using OngekiFumenEditor.Modules.FumenVisualEditor.Base;
 
-var sourceLaneGroupId = 150;
-var genLaneType = LaneType.Right;
-var xGridOffset = new GridOffset(0, 0);
+var sourceLaneGroupId = 139;
+var genLaneType = LaneType.Left;
+var xGridOffset = new GridOffset(-6, 0);
 var tGridOffset = new GridOffset(0, 0);
 
 //获取编辑器目标对象
@@ -52,6 +52,8 @@ void CopyChild(ConnectableChildObjectBase s, ConnectableChildObjectBase t)
     foreach (var ctrl in s.PathControls)
     {
         var cp = (LaneCurvePathControlObject)ctrl.CopyNew(targetEditor.Fumen);
+        cp.TGrid = cp.TGrid + tGridOffset;
+        cp.XGrid = cp.XGrid + xGridOffset;
         t.AddControlObject(cp);
     }
 }
